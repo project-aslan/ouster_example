@@ -108,7 +108,7 @@ int main(int argc, char** argv) {
     };
 
     auto pc_sub =
-        nh.subscribe<sensor_msgs::PointCloud2>("points", 500, cloud_handler);
+        nh.subscribe<sensor_msgs::PointCloud2>("points_raw", 500, cloud_handler);
 
     ros::spin();
     return EXIT_SUCCESS;

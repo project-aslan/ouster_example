@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
     uint32_t W = OS1::n_cols_of_lidar_mode(
         OS1::lidar_mode_of_string(cfg.response.lidar_mode));
 
-    auto lidar_pub = nh.advertise<sensor_msgs::PointCloud2>("points", 10);
+    auto lidar_pub = nh.advertise<sensor_msgs::PointCloud2>("points_raw", 10);
     auto imu_pub = nh.advertise<sensor_msgs::Imu>("imu", 100);
 
     auto xyz_lut = OS1::make_xyz_lut(W, H, cfg.response.beam_azimuth_angles,
